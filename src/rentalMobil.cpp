@@ -12,6 +12,8 @@ int main()
 	string warnaGenerate[10];
 	string modelGenerate[10];
 	int hargaGenerate[10];
+	int harga_pilihan, pilihan, lama_minjam, total_tagihan;
+	
 	srand((unsigned int)time(NULL));
 	int jumlahMobil = rand() % 5 + 5;
 	cout << "Jumlah = " << jumlahMobil <<endl;
@@ -26,4 +28,16 @@ int main()
 	{
 		cout << i + 1 << ". " << modelGenerate[i] << " Warna " << warnaGenerate[i] << " Harga " << hargaGenerate[i] << endl;
 	}
+	cout << "Pilih mobil nomor: ";
+	cin >> pilihan;
+	harga_pilihan = hargaGenerate[pilihan-1];
+	
+	cout << "Mobil akan dipinjam berapa lama? : ";
+	cin >> lama_minjam;
+	total_tagihan = harga_pilihan * lama_minjam;
+	
+	cout << "Tarif pinjam mobil sebesar: Rp. " << total_tagihan << endl;
+	cout << "Silahkan masukkan uang anda (Rp.)
+	
+	
 }

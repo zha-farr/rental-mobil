@@ -28,7 +28,7 @@ bayar:
 int main()
 {
     string warna[] = {"putih", "hitam", "merah", "hijau", "biru", "kuning", "ungu"};
-    string model[] = {"Tesla model S", "Hyundai Staria", "Chevrolet Colorado", "Karin Kuruma", "Toyota Alphard", "Bravado Bison", "Toyota Celica", "Karin Calico", "Vapid Sentinel"};
+    string model[] = {"Tesla model S", "Hyundai Staria", "Chevrolet Colorado", "Karin Kuruma", "Toyota Alphard", "Bravado Bison", "Toyota Celica", "Karin Calico", "Vapid Sentinel", "Coil Raiden"};
     int harga[] = {800, 100, 100, 100, 100, 100, 100, 100, 100};
     string warnaGenerate[10];
     string modelGenerate[10];
@@ -79,7 +79,7 @@ int main()
 
     if (hari > lama_minjam)
     {
-        cout << "Anda terlambat mengembalikan. Anda mendapatkan denda sebesar: " << denda << endl;
+        cout << "Anda terlambat mengembalikan. Anda dikenakan denda sebesar: " << denda << endl;
         coutBayar(denda);
     }
 

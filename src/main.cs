@@ -1,13 +1,26 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 
 namespace RentalMobil
 {
-    internal class Program
+    internal static class Program
     {
+        internal static List<Mobil> _template = new List<Mobil>()
+        {
+            new Mobil("Debawchee Champion", 500000, 40, 2, true, 2500, "Merah", false, true),
+            new Mobil("Coil Voltic", 450000, 50, 2, true, 2500, "Hitam", true, false),
+            new Mobil("Canis Mesa", 200000, 40, 4, false, 1949, "Cokelat", false, false),
+            new Mobil("Pegassi Toreador", 850000, 50, 4, true, 3000, "Biru", false, true),
+            new Mobil("Declasse Granger", 200000, 41, 7, true, 1549, "Hitam", false, true),
+            new Mobil("Karin Calico", 400000, 47, 2, true, 2499, "Putih", false, true),
+            new Mobil("Dinka Jester RR", 560000, 52, 2, true, 2749, "Putih", false, true),
+        };
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
+        private static void Print(this string str) => Console.Write(str);
+        private static void Println(this string str) => Console.WriteLine(str);
     }
     internal class Mobil
     {

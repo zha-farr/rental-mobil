@@ -8,10 +8,16 @@ void ifTersedia(string model, string warna, int harga, int jumlah_mobil, int pil
 
     do
     {
-    system("cls");
-    cout << "Anda meminjam mobil jenis " << model << " warna " << warna << endl;
-    cout << "Mobil akan dipinjam berapa lama? (hari): ";
-    cin >> lama_minjam;
+        system("cls");
+        cout << "Anda meminjam mobil jenis " << model << " warna " << warna << endl;
+        cout << "Mobil akan dipinjam berapa lama? (hari): ";
+        cin >> lama_minjam;
+        if (lama_minjam < 1)
+        {
+            cout << "Nilai yang anda masukkan tidak valid" << endl;
+            cout << "Tekan ENTER untuk memasukkan kembali lama peminjaman\n" <<;
+            cin.get();
+        }
     } while(lama_minjam < 1);
 
     total_tarif = harga * lama_minjam;

@@ -10,7 +10,7 @@ int main()
     string warna[] = {"putih", "hitam", "merah", "hijau", "biru", "kuning", "ungu"};
     string model[] = {"Tesla model S", "Hyundai Staria", "Chevrolet Colorado", "Karin Kuruma", "Toyota Alphard", "Bravado Bison", "Toyota Celica", "Karin Calico", "Vapid Sentinel"};
     int harga[] = {100, 200, 300, 400, 500, 600, 700, 800, 900};
-    int harga_pilihan, pilihan;
+    int pilihan;
 
     srand((unsigned int)time(NULL));
 
@@ -48,7 +48,6 @@ menu:
     }
     else
     {
-        harga_pilihan = hargaGenerate[pilihan - 1];
         ifTersedia(modelGenerate[pilihan - 1], warnaGenerate[pilihan - 1], hargaGenerate[pilihan - 1], jumlahMobil, pilihan);
     }
 }

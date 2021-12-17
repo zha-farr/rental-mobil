@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\gerai\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\gerai\\.nuget\\packages"
+    ]
+  }
+}

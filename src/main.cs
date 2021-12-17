@@ -24,7 +24,7 @@ namespace RentalMobil
             4,5,6,3
         };
         private static Dictionary<int, List<Mobil>> KoleksiMobil = new Dictionary<int, List<Mobil>>();
-        private static Random random = new Random(Environment.TickCount);
+        private static Random random = new Random(DateTimeOffset.UtcNow.Ticks.GetHashCode());
         static void Main(string[] args)
         {
             int garasiCount = 1;

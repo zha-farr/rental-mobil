@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Threading;
 using System.Collections.Generic;
@@ -62,6 +62,8 @@ namespace RentalMobil
                 }
                 Console.WriteLine();
             }
+            "Press any key to exit the program".Print();
+            Console.ReadKey();
         }
         private static void Print(this string str) => Console.Write(str);
         private static void Println(this string str) => Console.WriteLine(str);

@@ -11,6 +11,11 @@ int main()
     string model[] = {"Tesla model S", "Hyundai Staria", "Chevrolet Colorado", "Karin Kuruma", "Toyota Alphard", "Bravado Bison", "Toyota Celica", "Karin Calico", "Vapid Sentinel"};
     int harga[] = {100, 200, 300, 400, 500, 600, 700, 800, 900};
     int pilihan;
+    Mobil garasi1[4];
+    Mobil garasi2[5];
+    Mobil garasi3[3];
+    Mobil garasi4[4];
+    Mobil garasi5[6];
 
     srand((unsigned int)time(NULL));
 

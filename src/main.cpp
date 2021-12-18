@@ -51,3 +51,37 @@ menu:
         ifTersedia(modelGenerate[pilihan - 1], warnaGenerate[pilihan - 1], hargaGenerate[pilihan - 1], jumlahMobil, pilihan);
     }
 }
+class DataMobil
+{
+    public:
+    string Model;
+    int FuelCapacity;
+    int SeatCapacity;
+    int EngineDisplacement;
+    int DailyPrice;
+    string PriorityColor;
+    bool HasAirConditioner;
+    bool HasAutomaticEngine;
+    string FuelType;
+    DataMobil(string model, int bensin, int kursi, int cc, int harga, string warna, 
+    bool ac, bool matic, string bahanBakar)
+    {
+        Model = model;
+        FuelCapacity = bensin;
+        SeatCapacity = kursi;
+        EngineDisplacement = cc;
+        DailyPrice = harga;
+        PriorityColor = warna;
+        HasAirConditioner = ac;
+        HasAutomaticEngine = matic;
+        FuelType = bahanBakar;
+    }
+};
+class Mobil
+{
+    public:
+    DataMobil Data;
+    string Warna;
+    string LicensePlate;
+    int Kilometer;
+};

@@ -15,10 +15,11 @@ void ifTersedia(string model, string warna, int harga, int jumlah_mobil, int pil
         if (lama_minjam < 1)
         {
             cout << "Nilai yang anda masukkan tidak valid" << endl;
-            cout << "Tekan ENTER untuk memasukkan kembali lama peminjaman\n" <<;
+            cin.ignore();
+            cout << "Tekan ENTER untuk memasukkan kembali lama peminjaman\n";
             cin.get();
         }
-    } while(lama_minjam < 1);
+    } while (lama_minjam < 1);
 
     total_tarif = harga * lama_minjam;
 
@@ -58,7 +59,7 @@ bayar:
         hari++;
     } while (getch() != 'y');
 
-    if ((hari-1) > lama_minjam)
+    if ((hari - 1) > lama_minjam)
     {
     bayar2:
         system("cls");
@@ -80,4 +81,5 @@ bayar:
     }
 
     cout << "Terimakasih" << endl;
+    cout << "Jika ada apa-apa calling nomer ini: 12345" << endl;
 }

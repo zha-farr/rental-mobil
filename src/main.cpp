@@ -24,7 +24,7 @@ int main()
     for (int i = 0; i < 15; i++)
     {
         int r = rand() % (sizeof(models) / sizeof(string));
-        modelRandom[i] = models[rand() % 36];
+        modelRandom[i] = models[r];
         bensin[i] = fuels[r];
         kursi[i] = seats[r];
         cc[i] = engines[r];
@@ -41,6 +41,7 @@ int main()
         platNomor[i] = platDaerah + IntToString(nomorPlat) + akhiran1 + akhiran2;
         cout << modelRandom[i] << " Plat: " << platNomor[i] << endl;
     }
+    //Ada 3 Garasi. Garasi 1 akan mengambil array index 0 - 4, Garasi 2 akan mengambil array index 5 - 10, Garasi 3 akan mengambil array index 11 - 14
 }
 
 string IntToString(int a)

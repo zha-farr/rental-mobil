@@ -1,53 +1,51 @@
-#include <iostream>
-#include <ctime>
-#include <stdlib.h>
-#include <conio.h>
-#include "pilihan-tersedia.h"
+#include "iostream"
+#include "ctime"
+#include "stdlib.h"
+#include "sstream"
+#include "DataMobil.h"
+
 using namespace std;
 
+string IntToString(int a);
 int main()
 {
-    string warna[] = {"putih", "hitam", "merah", "hijau", "biru", "kuning", "ungu"};
-    string model[] = {"Tesla model S", "Hyundai Staria", "Chevrolet Colorado", "Karin Kuruma", "Toyota Alphard", "Bravado Bison", "Toyota Celica", "Karin Calico", "Vapid Sentinel"};
-    int harga[] = {100, 200, 300, 400, 500, 600, 700, 800, 900};
-    int pilihan;
-
+    string modelRandom[15];
+    string bensin[15];
+    string kursi[15];
+    string cc[15];
+    int harga[15];
+    string warna[15];
+    string adaAC[15];
+    string tipeMesin[15];
+    string bahanbakar[15];
+    int kilometer[15];
+    string platNomor[15];
     srand((unsigned int)time(NULL));
-
-    int jumlahMobil = rand() % 5 + 5;
-
-    string warnaGenerate[jumlahMobil];
-    string modelGenerate[jumlahMobil];
-    int hargaGenerate[jumlahMobil];
-    for (int i = 0; i < jumlahMobil; i++)
+    for (int i = 0; i < 15; i++)
     {
-        int modelRandom = rand() % (sizeof(model) / sizeof(string));
-        warnaGenerate[i] = warna[rand() % (sizeof(warna) / sizeof(string))];
-        modelGenerate[i] = model[modelRandom];
-        hargaGenerate[i] = harga[modelRandom];
+        int r = rand() % (sizeof(models) / sizeof(string));
+        modelRandom[i] = models[rand() % 36];
+        bensin[i] = fuels[r];
+        kursi[i] = seats[r];
+        cc[i] = engines[r];
+        harga[i] = prices[r];
+        warna[i] = rand() % 2 == 1 ? colors[r] : allColors[rand() % 108];
+        adaAC[i] = haveAC[r];
+        tipeMesin[i] = engineTypes[r];
+        bahanbakar[i] = fuelTypes[r];
+        kilometer[i] = rand() % 98888 + 1111;
+        string platDaerah = awalanPlat[rand() % (sizeof(awalanPlat) / sizeof(string))];
+        int nomorPlat = rand() % 8999 + 1000;
+        char akhiran1 = rand() % 26 + 65;
+        char akhiran2 = rand() % 26 + 65;
+        platNomor[i] = platDaerah + IntToString(nomorPlat) + akhiran1 + akhiran2;
+        cout << modelRandom[i] << " Plat: " << platNomor[i] << endl;
     }
-menu:
-    system("cls");
-    cout << "Selamat Datang" << endl;
-    cout << "Jumlah = " << jumlahMobil << endl;
+}
 
-    for (int i = 0; i < jumlahMobil; i++)
-    {
-        cout << i + 1 << ". " << modelGenerate[i] << " Warna " << warnaGenerate[i] << " Harga Rp." << hargaGenerate[i] << "/hari" << endl;
-    }
-
-    cout << "Pilih mobil nomor: ";
-    cin >> pilihan;
-
-    if ((pilihan > jumlahMobil) || (pilihan < 1))
-    {
-        cout << "Pilihan anda tidak tersedia. Tekan sembarang tombol untuk memilih kembali.." << endl;
-        getch();
-        system("cls");
-        goto menu;
-    }
-    else
-    {
-        ifTersedia(modelGenerate[pilihan - 1], warnaGenerate[pilihan - 1], hargaGenerate[pilihan - 1], jumlahMobil, pilihan);
-    }
+string IntToString(int a)
+{
+    ostringstream temp;
+    temp << a;
+    return temp.str();
 }
